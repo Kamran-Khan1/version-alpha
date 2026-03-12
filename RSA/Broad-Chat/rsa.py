@@ -54,9 +54,11 @@ class RSA:
         return "".join(chr(pow(char, self.d, self.N)) for char in ciphertext)
 
 
+"""
 rsa = RSA()
 
 test = "Hello"
 encrypt = rsa.encrypt(test)
 decrypt = rsa.decrypt(encrypt)
 print(f"Encrypted: {encrypt}, decrypted: {decrypt}")
+"""
