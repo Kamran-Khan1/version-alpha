@@ -9,7 +9,6 @@ rsa = RSA()
 
 # receive e and N and d from server
 keys = client.recv(1024).decode().split(",")
-print(f"keys : {keys}")
 e = int(keys[0])
 N = int(keys[1])
 d = int(keys[2])
