@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="en">
+<html lang="bn">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Beautiful Blog</title>
+    <title>The Modern Era | AI & Computation</title>
     <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&family=Hind+Siliguri:wght@300;400;600;700&display=swap"
       rel="stylesheet"
     />
     <link
@@ -30,7 +30,7 @@
       }
 
       body {
-        font-family: "Inter", sans-serif;
+        font-family: "Inter", "Hind Siliguri", sans-serif;
         background: linear-gradient(135deg, var(--light-bg) 0%, #e9ecef 100%);
         color: var(--text-color);
         line-height: 1.8;
@@ -48,18 +48,10 @@
         text-align: center;
         position: relative;
         overflow: hidden;
-      }
-
-      .hero::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="80" cy="80" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="60" cy="40" r="1" fill="rgba(255,255,255,0.1)"/></svg>')
-          repeat;
-        opacity: 0.3;
+        min-height: 40vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
 
       .hero-content {
@@ -67,6 +59,8 @@
         z-index: 1;
         max-width: 800px;
         margin: 0 auto;
+        width: 100%;
+        padding: 0 1rem;
       }
 
       .hero h1 {
@@ -77,17 +71,10 @@
         text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
       }
 
-      .hero p {
-        font-size: 1.3rem;
-        font-weight: 300;
-        opacity: 0.9;
-      }
-
       .container {
         width: min(100%, 800px);
-        max-width: 800px;
-        margin: -2rem auto 0;
-        padding: 0 2rem;
+        margin: -2rem auto 2rem;
+        padding: 0 1rem;
         position: relative;
       }
 
@@ -96,23 +83,7 @@
         border-radius: 16px;
         box-shadow: 0 20px 40px var(--shadow);
         overflow: hidden;
-        margin-bottom: 2rem;
-      }
-
-      img {
-        max-width: 100%;
-        height: auto;
-        display: block;
-      }
-
-      .author-info {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 1rem;
-        flex-wrap: wrap;
-        max-width: 400px;
-        margin: 0 auto;
+        animation: fadeInUp 0.8s ease-out;
       }
 
       .post-header {
@@ -123,9 +94,7 @@
       .post-title {
         font-family: "Playfair Display", serif;
         font-size: 2.5rem;
-        font-weight: 700;
         color: var(--primary-color);
-        margin-bottom: 1rem;
         line-height: 1.2;
       }
 
@@ -134,82 +103,72 @@
         justify-content: center;
         align-items: center;
         gap: 2rem;
+        flex-wrap: wrap;
         font-size: 0.9rem;
         color: #666;
-        margin-bottom: 2rem;
+        margin: 1.5rem 0;
       }
 
       .post-meta span {
-        display: flex;
+        display: inline-flex;
         align-items: center;
-        gap: 0.5rem;
+        gap: 0.35rem;
       }
 
-      .material-icons {
-        font-size: 1.2rem;
+      .post-meta i {
+        font-size: 1.05rem;
         vertical-align: middle;
       }
 
       .post-content {
-        padding: 0 2rem 3rem;
+        padding: 0 2.5rem 3rem;
         font-size: 1.1rem;
-        line-height: 1.8;
+        line-height: 1.7;
       }
 
       .post-content p {
         margin-bottom: 1.5rem;
       }
 
-      .post-content p:first-child {
-        font-size: 1.2rem;
-        font-weight: 600;
-        color: var(--primary-color);
-        text-align: center;
-        margin-bottom: 2rem;
-        position: relative;
-      }
-
-      .post-content p:first-child::after {
-        content: "";
-        display: block;
-        width: 60px;
-        height: 3px;
-        background: var(--secondary-color);
-        margin: 1rem auto 0;
-        border-radius: 2px;
+      .bn-text {
+        font-family: "Hind Siliguri", sans-serif;
+        border-top: 1px solid #eee;
+        padding-top: 2rem;
+        margin-top: 2rem;
       }
 
       .highlight {
         background: linear-gradient(120deg, #a8edea 0%, #fed6e3 100%);
-        padding: 0.2rem 0.5rem;
+        padding: 0.1rem 0.4rem;
         border-radius: 4px;
         font-weight: 600;
       }
 
+      .ai-box {
+        background: #f1f4f8;
+        padding: 1.5rem;
+        border-radius: 12px;
+        border-left: 5px solid var(--secondary-color);
+        margin: 1.5rem 0;
+      }
+
+      .ai-box h4 {
+        margin-bottom: 0.5rem;
+        color: var(--primary-color);
+      }
+
       .quote {
         font-style: italic;
-        font-size: 1.3rem;
-        color: var(--primary-color);
+        font-size: 1.2rem;
         border-left: 4px solid var(--secondary-color);
         padding-left: 1rem;
         margin: 2rem 0;
-        position: relative;
-      }
-
-      .quote::before {
-        content: '"';
-        font-size: 3rem;
-        color: var(--accent-color);
-        position: absolute;
-        left: -0.5rem;
-        top: -0.5rem;
-        font-family: serif;
       }
 
       .author {
         text-align: center;
         padding: 2rem;
-        background: linear-gradient(135deg, var(--light-bg) 0%, #e9ecef 100%);
+        background: #f8f9fa;
         border-top: 1px solid #dee2e6;
       }
 
@@ -218,131 +177,26 @@
         align-items: center;
         justify-content: center;
         gap: 1rem;
-        max-width: 400px;
-        margin: 0 auto;
       }
 
       .author-avatar {
         width: 60px;
         height: 60px;
         border-radius: 50%;
-        overflow: hidden;
-        display: flex;
-        align-items: center;
-        justify-content: center;
         background: linear-gradient(
           135deg,
-          var(--secondary-color) 0%,
-          var(--accent-color) 100%
+          var(--secondary-color),
+          var(--accent-color)
         );
+        overflow: hidden;
       }
 
       .author-avatar img {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        display: block;
       }
 
-      .author-details h4 {
-        margin-bottom: 0.25rem;
-        color: var(--primary-color);
-      }
-
-      .author-details p {
-        font-size: 0.9rem;
-        color: #666;
-      }
-
-      /* Responsive Design */
-      @media (max-width: 768px) {
-        .hero {
-          padding: 3rem 1rem;
-        }
-
-        .hero h1 {
-          font-size: 2.5rem;
-        }
-
-        .hero p {
-          font-size: 1.1rem;
-        }
-
-        .container {
-          padding: 0 1rem;
-          margin-top: -1rem;
-        }
-
-        .post-header {
-          padding: 2rem 1rem 1rem;
-        }
-
-        .post-title {
-          font-size: 2rem;
-        }
-
-        .post-meta {
-          flex-direction: column;
-          gap: 0.5rem;
-        }
-
-        .post-content {
-          padding: 0 1rem 2rem;
-          font-size: 1rem;
-        }
-
-        .post-content p:first-child {
-          font-size: 1.1rem;
-        }
-
-        .quote {
-          font-size: 1.1rem;
-        }
-      }
-
-      @media (max-width: 480px) {
-        .hero {
-          padding: 2.5rem 1rem;
-        }
-
-        .hero h1 {
-          font-size: 1.9rem;
-        }
-
-        .hero p {
-          font-size: 1rem;
-        }
-
-        .container {
-          margin-top: -1.5rem;
-          padding: 0 1rem;
-        }
-
-        .post-header {
-          padding: 1.5rem 1rem 1rem;
-        }
-
-        .post-title {
-          font-size: 1.8rem;
-        }
-
-        .post-meta {
-          font-size: 0.8rem;
-          gap: 0.75rem;
-        }
-
-        .post-content {
-          padding: 0 1rem 1.5rem;
-        }
-
-        .author-info {
-          flex-direction: column;
-          text-align: center;
-          gap: 0.75rem;
-        }
-      }
-
-      /* Animations */
       @keyframes fadeInUp {
         from {
           opacity: 0;
@@ -354,17 +208,160 @@
         }
       }
 
-      .post {
-        animation: fadeInUp 0.8s ease-out;
+      @media (max-width: 600px) {
+        .post-title {
+          font-size: 1.8rem;
+        }
+        .post-content {
+          padding: 0 1.5rem 2rem;
+        }
+        .post-meta {
+          flex-direction: column;
+          align-items: center;
+          gap: 0.5rem;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .hero {
+          padding: 3rem 1rem;
+        }
+
+        .hero h1 {
+          font-size: 2.5rem;
+        }
+
+        .container {
+          padding: 0 1rem;
+          margin: -1rem auto 2rem;
+        }
+
+        .post-header {
+          padding: 2rem 1rem 1rem;
+        }
+
+        .post-title {
+          font-size: 2rem;
+        }
+
+        .post-content {
+          padding: 0 1.5rem 2rem;
+          font-size: 1rem;
+        }
+
+        .post-content p {
+          margin-bottom: 1.2rem;
+        }
+
+        .ai-box {
+          padding: 1.2rem;
+        }
+
+        .quote {
+          font-size: 1.1rem;
+          padding-left: 0.8rem;
+        }
+
+        .author {
+          padding: 1.5rem;
+        }
+
+        .author-info {
+          flex-direction: column;
+          text-align: center;
+          gap: 0.8rem;
+        }
+
+        .author-avatar {
+          width: 50px;
+          height: 50px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .hero {
+          padding: 2rem 1rem;
+        }
+
+        .hero h1 {
+          font-size: 2rem;
+        }
+
+        .hero p {
+          font-size: 1rem;
+        }
+
+        .container {
+          margin: -0.5rem auto 1rem;
+        }
+
+        .post {
+          border-radius: 12px;
+        }
+
+        .post-header {
+          padding: 1.5rem 1rem 0.8rem;
+        }
+
+        .post-title {
+          font-size: 1.6rem;
+          line-height: 1.3;
+        }
+
+        .post-meta {
+          font-size: 0.85rem;
+          gap: 0.3rem;
+        }
+
+        .post-content {
+          padding: 0 1rem 1.5rem;
+          font-size: 0.95rem;
+        }
+
+        .bn-text {
+          padding-top: 1.5rem;
+          margin-top: 1.5rem;
+        }
+
+        .ai-box {
+          padding: 1rem;
+          margin: 1rem 0;
+        }
+
+        .ai-box h4 {
+          font-size: 1rem;
+        }
+
+        .quote {
+          font-size: 1rem;
+          margin: 1.5rem 0;
+        }
+
+        .author {
+          padding: 1.2rem;
+        }
+
+        .author-avatar {
+          width: 45px;
+          height: 45px;
+        }
+
+        .author-details h4 {
+          font-size: 1rem;
+        }
+
+        .author-details p {
+          font-size: 0.9rem;
+        }
       }
     </style>
   </head>
   <body>
     <header class="hero">
       <div class="hero-content">
-        <h1>The Modern Era</h1>
+        <h1>Artificial Intelligence</h1>
         <p>
-          Bridging the gap between <i>Physics</i> and
+          Bridging the gap between <i>Mathematical thinking</i> and
           <i>Artificial Intelligence</i>
         </p>
       </div>
@@ -373,71 +370,78 @@
     <div class="container">
       <article class="post">
         <header class="post-header">
-          <h1 class="post-title">Navigating the frontier of computation</h1>
+          <h1 class="post-title">THE MODERN ERA OF AI</h1>
           <div class="post-meta">
             <span
-              ><i class="material-icons">calendar_today</i>April 9, 2026</span
+              ><i class="material-icons">calendar_today</i>April 19, 2026</span
             >
             <span><i class="material-icons">person</i>Kamran</span>
-            <span><i class="material-icons">schedule</i>4 min read</span>
+            <span><i class="material-icons">schedule</i>6 min read</span>
           </div>
         </header>
 
         <div class="post-content">
-          <p class="dropcap">
-            Every great thing humans have ever built started with a simple
-            question — <em>what if?</em> From the first airplane slicing through
-            open sky, to NASA's Artemis II mission reaching toward the moon, to
-            breathtaking images of our galaxy arriving from deep space — all of
-            it traces back to one unstoppable force:
-            <span class="highlight">human curiosity</span>.
-          </p>
-
-          <p>
-            Today, that curiosity has found its most powerful tool yet — the
-            computer. This journey blends the depth of Computational Science
-            with the creative potential of Artificial Intelligence. At the heart
-            of it all lies the language of the universe: <b>Mathematics</b>.
-          </p>
-
-          <p>
-            From mastering <b>Differential Equations</b> and
-            <b>Matrix Theory</b> to applying the <b>Jacobi method</b> for
-            complex modeling, the focus remains on bridging the gap between
-            theoretical proofs and computer-executable algorithms. Numbers run
-            quietly beneath everything — but numbers alone are not enough.
-            <em>Accuracy</em> is everything.
-          </p>
+          <p>How AI is changing the game ✨</p>
 
           <blockquote class="quote">
             The goal isn't just to learn the future of technology, but to
-            actively build it.
+            actively use it.
           </blockquote>
 
-          <p>
-            While many approach AI from a purely statistical angle, there is a
-            distinct pull toward the physical world. Achieving top marks in
-            Physics has opened the door from student to mentor — guiding others
-            through the complexities of physical sciences as a Teaching
-            Assistant.
-          </p>
+          <div class="bn-text">
+            <p>
+              গত এক দশকে <b>আর্টিফিশিয়াল ইন্টেলিজেন্স</b> বা কৃত্রিম
+              বুদ্ধিমত্তা আমাদের দৈনন্দিন জীবনযাত্রাকে অভাবনীয়ভাবে বদলে দিয়েছে।
+              বর্তমানে প্রায় প্রতিটি কাজেই আমরা কোনো না কোনোভাবে এআই ব্যবহার
+              করছি। কিন্তু প্রশ্ন হলো—আমরা কি আসলেই এই প্রযুক্তিকে তার পূর্ণ
+              ক্ষমতায় ব্যবহার করতে পারছি? সত্যি বলতে, এআই থাকলেই হয় না, তার সঠিক
+              ব্যবহার বা
+              <span class="highlight">প্রম্পট ইঞ্জিনিয়ারিং</span> জানাও এখনকার
+              সময়ের অন্যতম বড় একটি স্কিল।
+            </p>
 
-          <p>
-            Furthermore, the exploration into <b>Quantum Computing</b> —
-            specifically the development of <b>logical qubits</b> — signals a
-            forward-thinking mindset. It is an investigation into the next great
-            leap in technology, looking past today's binary constraints toward
-            exponential processing power.
-          </p>
+            <p>
+              বর্তমানে মার্কেটে <b>Claude</b>, <b>ChatGPT</b>, আর
+              <b>Gemini</b>-র মতো পাওয়ারফুল সব এআই মডেল এভেইলঅ্যাবল। তবে সবচেয়ে
+              ইন্টারেস্টিং বিষয় কি জানেন? প্রতিটি এআই মডেলের নিজস্ব কিছু
+              <i>'সুপারপাওয়ার'</i> আছে। চলুন দেখে নিই কোনটা কোন জায়গায় সেরা:
+            </p>
 
-          <p>
-            In the end, theory is only as powerful as its implementation.
-            Whether tackling intensive web development or perfecting algorithmic
-            efficiency in <b>Python</b>, the goal is simple: stay at the
-            intersection of deep knowledge and real-world impact. Because
-            knowledge, now more than ever, is what separates those who use the
-            tools from those who build them.
-          </p>
+            <div class="ai-box">
+              <h4>✨ Claude (সৃজনশীলতা ও সূক্ষ্মতা)</h4>
+              <p>
+                আপনি যদি খুব ন্যাচারাল কোনো লেখা লিখতে চান, তবে CLAUDE সেরা। এটি
+                বড় ডকুমেন্ট বিশ্লেষণ বা সূক্ষ্ম তথ্য বের করে আনতে দারুণ কার্যকর।
+                এছাড়াও ডেভেলপার দের মতে এটি কোডিং এও খুবি ভালো আউটপুট দিতে পারে।
+                তবে সঠিক প্রম্পট দিতে পারতে হবে। সর্বচ্চ চেষ্টা করতে হবে
+                প্রত্যেক প্রম্পটে ম্যাক্সিমাম আউটপুট বের করতে পারা।
+              </p>
+            </div>
+
+            <div class="ai-box">
+              <h4>💻 ChatGPT (লজিক ও ম্যাথ)</h4>
+              <p>
+                আপনার যদি কোনো কঠিন গাণিতিক সমস্যা বা লজিক্যাল প্রব্লেম থাকে,
+                তবে চ্যাটজিপিটি-র বিকল্প নেই। লজিক্যাল প্ল্যানিংয়ে এটি অভাবনীয়
+                দক্ষ। এছারা কঠিন গানিতিক সমস্যার এটি খুবি কার্যকরী সমাধান দিতে
+                পারে।
+              </p>
+            </div>
+
+            <div class="ai-box">
+              <h4>🌐 Gemini (রিয়েল-টাইম তথ্য)</h4>
+              <p>
+                গুগল ইকোসিস্টেমের অংশ হওয়ায় এটি রিয়েল-টাইম তথ্য অনুসন্ধান এবং
+                জিমেইল বা ড্রাইভের ডেটা নিয়ে কাজ করতে অপ্রতিদ্বন্দ্বী।
+              </p>
+            </div>
+
+            <p>
+              মূল কথা হলো, আমরা যদি আমাদের টাস্কের জন্য সঠিক এআই মডেলটি বেছে
+              নিতে পারি, তবে প্রোডাক্টিভিটি কয়েক গুণ বেড়ে যাবে। এআই-কে ব্যবহার
+              করতে পারাও বর্তমান সময়ে একটি পাওয়ারফুল স্কিল।
+            </p>
+          </div>
         </div>
 
         <footer class="author">
@@ -448,7 +452,7 @@
             <div class="author-details">
               <h4>Kamran</h4>
               <p>
-                Computational Science & AI student.
+                Computational Science & AI student
                 <span class="highlight">(LUT)</span>
               </p>
             </div>
