@@ -435,8 +435,10 @@ nav {
   .cta-buttons {
     flex-direction: column;
     gap: 1rem;
+    flex-wrap: nowrap;
     width: 100%;
     max-width: 280px;
+    align-content: center;
   }
 
   .btn {
